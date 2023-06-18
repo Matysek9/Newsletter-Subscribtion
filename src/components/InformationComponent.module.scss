@@ -1,0 +1,8 @@
+@import "../../public/colors";
+
+h1{
+    color:transparentize($color: $DarkSlateGrey, $amount: 0 );
+    font-size: 2rem;
+    
+
+}
