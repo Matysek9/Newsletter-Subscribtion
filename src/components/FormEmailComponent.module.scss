@@ -1,0 +1,78 @@
+@import "../../public/colors";
+
+.formLayoutControm {
+  width: 85%;
+  font-family: inherit;
+  position: relative;
+
+  input {
+    display: block;
+    box-sizing: border-box;
+    font-family: inherit;
+    
+
+    margin: 0.5rem 0 1rem;
+    padding: 1em;
+    width: 100%;
+    border-radius: $DelicateBorderRadius;
+    border: 1px solid transparentize($color: $Grey, $amount: 0.5);
+
+    //Używamy & do pseudoklas inaczej muysiałby być input:focus
+    // Samo zagnieżdżenie :focus nie działa!
+    &:focus {
+      //Obwódka gdy klinkięty, default Niebieski
+      outline: $Grey solid 1px;
+    }
+    &:hover {
+      cursor: pointer;
+    }
+
+    &.error{
+        background-color: transparentize($color: $Tomatosss, $amount: 0.8);
+        border-color: $Tomatosss;
+        color: $Tomatosss;
+       
+    }
+
+  }
+
+  ::placeholder {
+    color: $Grey;
+    opacity: 1;
+  }
+
+  button {
+    padding: 1rem;
+    display: block;
+    width: 100%;
+    font-family: inherit;
+    margin-bottom: 2em;
+
+    border: none;
+    color: $White;
+    background-color: $DarkSlateGrey;
+    border-radius: $DelicateBorderRadius;
+
+    &:hover,
+    &:active {
+      background: linear-gradient(90deg, $Pink, $Orange);
+      cursor: pointer;
+    }
+  }
+
+  span{
+    font-size: 0.9rem;
+    color: $DarkSlateGrey;
+    font-weight: 700;
+  }
+
+  .errorMessage{
+    text-align: right;
+    color: $Tomatosss;
+  }
+
+  .flex{
+    display: flex;
+    justify-content: space-between;
+  }
+}

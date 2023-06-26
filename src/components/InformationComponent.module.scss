@@ -1,8 +1,28 @@
 @import "../../public/colors";
 
-h1{
-    color:transparentize($color: $DarkSlateGrey, $amount: 0 );
-    font-size: 2rem;
-    
+.textStyle {
+  padding: 1rem;
+  color: transparentize($color: $DarkSlateGrey, $amount: 0.1);
 
+  ul {
+    list-style: none;
+    padding: 0.5rem;
+
+    li {
+      background: url(images/icon-list.svg);
+      background-repeat: no-repeat;
+      background-position: left;
+      margin-top: 0.2rem;
+      padding: 5px;
+      padding-left: 2em;
+    }
+  }
+
+  h1 {
+    color: transparentize($color: $DarkSlateGrey, $amount: 0);
+    font-size: 2rem;
+    letter-spacing: -1px;
+   
+    
+  }
 }
